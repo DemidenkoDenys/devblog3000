@@ -8,6 +8,9 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 })
 export class ArticleComponent implements OnInit {
 
+  language = 'html';
+  content = '<p>wwwdwd<p>';
+
   constructor() { }
 
   ngOnInit() { }
