@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Renderer2 } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-code',
@@ -9,8 +9,8 @@ export class CodeComponent implements OnInit {
 
   @Input() language: string = '';
   @Input() content: string = '';
-  
-  constructor(public renderer: Renderer2) { }
+
+  constructor() { }
 
   ngOnInit() {}
 

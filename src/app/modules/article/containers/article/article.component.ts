@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { FontService } from '@services';
 
 @Component({
   selector: 'app-article',
@@ -28,8 +29,10 @@ const cart = {
 
 terminal.setReaderDisplay({ type: 'cart', cart });`;
 
-  constructor() { }
+  constructor(private fontService: FontService) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.fontService.setGoogleFont('Roboto');
+  }
 
 }

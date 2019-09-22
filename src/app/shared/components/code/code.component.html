@@ -1,8 +1,9 @@
 <div class="code-container">
 
-    <ngx-prism [language]="language">
-      {{ content }}
-    </ngx-prism>
+    <ngx-prism
+      [language]="language"
+      [code]="content"
+    ></ngx-prism>
 
     <button
       ngxClipboard
