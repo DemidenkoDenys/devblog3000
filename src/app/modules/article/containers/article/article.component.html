@@ -16,9 +16,10 @@
         <div class="article-text">
           <p>Директива ngFor предназначена для вывода небольшого куска html циклически на основе данных массива или объекта.</p>
 
-          <ngx-prism [language]="language">
-            {{ content }}
-          </ngx-prism>
+          <app-code
+            [content]="content"
+            [language]="language"
+          ></app-code>
 
         </div>
        
