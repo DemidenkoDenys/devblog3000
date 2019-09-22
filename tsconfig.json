@@ -22,6 +22,7 @@
       "@modules/*": ["src/app/modules/*"],
       "@modules/shared": ["src/app/shared/shared.module.ts"],
       "@services": ["src/app/core/services"],
+      "@pipes": ["src/app/shared/pipes"],
       "@constants": ["src/app/core/constants"]
     }
   }

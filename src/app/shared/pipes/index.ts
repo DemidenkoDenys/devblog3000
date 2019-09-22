@@ -1,0 +1,1 @@
+export { SafePipe } from './safe-html.pipe';

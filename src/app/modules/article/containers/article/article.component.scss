@@ -3,26 +3,44 @@
 }
 
 .article-header,
+.article-content,
+::ng-deep.article-content p,
+::ng-deep.article-content h2,
+.article-image-container {
+  margin-bottom: 30px;
+}
+
+.article-header,
 .article-content {
   max-width: 728px;
   margin: 0 auto;
-  margin-bottom: 30px;
-}
-
-.article-indent {
-  font-size: 1.4rem;
-  line-height: 1.4;
-  margin-bottom: 30px;
-}
-
-.article-image-container{
-  text-align: center;
-
-  img {
-    width: 100%;
-  }
 }
 
 .full-width {
   max-width: 100%;
+}
+
+::ng-deep.article-header {
+  h1 {
+    line-height: 1.2;
+    padding: 30px 0;
+    text-align: center;
+    & > span{
+      font-size: 0.8em;
+      color: lightgrey;
+    }
+  }
+}
+
+::ng-deep.article-content {
+  figure {
+    text-align: center;
+    img{
+      width: 100%;
+    }
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
 }

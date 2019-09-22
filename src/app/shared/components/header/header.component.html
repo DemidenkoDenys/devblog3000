@@ -1,0 +1,18 @@
+<header class="page-header" [class.hide]="hideHeader">
+  <figure class="page-header-logo">
+    <img class="page-header-logo-image" src="assets/images/logo.png" alt="logo DevBlog3000" />
+  </figure>
+
+  <div>
+    <select name="font-selector" class="font-selector" id="font-selector" (change)="onFontSelected($event.target.value)">
+      <option value="Cormorant">Cormorant</option>
+      <option value="Montserrat">Montserrat</option>
+      <option value="Roboto">Roboto</option>
+      <option value="Open Sans">Open Sans</option>
+      <option value="Open Sans Condensed">Open Sans Condensed</option>
+      <option value="Jura">Jura</option>
+      <option value="Ubuntu">Ubuntu</option>
+      <option value="Old Standart TT">Old Standart TT</option>
+    </select>
+  </div>
+</header>

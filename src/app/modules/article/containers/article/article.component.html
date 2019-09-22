@@ -1,60 +1,23 @@
+<app-header></app-header>
+
 <main>
   <section class="article-section">
     <article class="article-container">
       
-      <header class="article-header">
-        <h1 class="article-title">ngFor - циклический вывод части шаблона Angular</h1>
-        <h2 class="article-subtitle">детальное описание с примерами</h2>
-      </header>
+      <header class="article-header" [innerHTML]="article[0] | safe: 'html'"></header>
 
       <section class="article-content">
-        <figure class="article-image-container">
-          <img class="article-image" src="https://www.elite-corner.com/wp-content/uploads/2018/11/angular-ngFor-directive-min.jpg" alt="">
-        </figure>
+        <figure><img src="{{ image }}" alt="{{ getPureText(article[0]) }}"></figure>
       </section>
 
       <section class="article-content">
-        <div class="article-text">
-          
-          <p class="article-indent">
-            В этом разделе мы научимся делать фильтрацию на основе декоратора Output и EventEmitter, для создания всплывающих событий. Для этого нам нужно создать обработчик событий и привязываем его к нашему текстовому блоку:
-          </p>
-          
-          <p class="article-indent">
-            <app-code
-              [content]="content"
-              [language]="language"
-            ></app-code>
-          </p>
-          
-          <p class="article-indent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, accusamus. Esse quibusdam quis perspiciatis expedita magnam nam, quisquam, impedit accusantium eum dolorem consequatur dolore a iure quaerat adipisci sequi dicta.
-          Itaque maiores quia earum id iste debitis quis non eius officia, doloremque, consequatur suscipit placeat quod asperiores ad libero quae. Incidunt et officia, nesciunt rem laboriosam consequuntur maxime recusandae error!
-          Saepe sit modi totam sed numquam a ex alias quo esse ducimus doloribus aut, corrupti itaque accusantium aliquam sapiente qui, fuga vero, error iure inventore. Impedit repellendus nam assumenda quos?
-          Illo dolorum ducimus fugiat magnam numquam, eaque nam aspernatur enim perferendis quas fugit assumenda fuga aut facilis asperiores optio? Quos quas sapiente quia molestias fugit at sit eius voluptas facere!
-          Quidem nostrum quisquam, voluptatem obcaecati iure necessitatibus aperiam repudiandae repellendus doloremque aliquam est, impedit veritatis temporibus facere ipsam omnis perspiciatis ab mollitia perferendis accusantium. Aperiam, voluptas. Quasi cumque earum iste!
-          Ab esse dolorem, porro amet explicabo, illum aliquid consectetur, est alias pariatur voluptate quia a unde doloremque animi quo sit architecto. Eum debitis officia minus rem atque iste excepturi perspiciatis?
-          Veritatis praesentium dolor eligendi sint? Cupiditate atque voluptate quas sapiente commodi, voluptatem laudantium inventore fuga laboriosam ducimus molestias culpa. Quos excepturi similique quae accusamus quam aspernatur sed porro distinctio officia!
-          Omnis tempora ea reprehenderit, veniam a cupiditate pariatur quaerat. Adipisci aspernatur esse mollitia odio quas accusantium nostrum nihil saepe sint possimus ipsum aut minima, sapiente voluptatum sequi placeat eius repellendus.
-          Tempore, maxime. Provident labore voluptatibus accusantium ipsa! Dolor maiores voluptas minus nisi ipsa autem, temporibus facere suscipit delectus doloribus illo corrupti ullam praesentium. Assumenda labore a reprehenderit asperiores laboriosam nam.
-          Dolores dolorum praesentium doloremque itaque sapiente odio rerum dolor alias, aliquid veritatis voluptates laudantium consectetur. Aspernatur vitae ducimus eius vel distinctio, in cum corrupti? Recusandae explicabo eum quae soluta natus?
-          Tempora officia itaque, accusamus adipisci quae aliquid obcaecati unde a blanditiis sunt reiciendis quasi quam deserunt est architecto ducimus corrupti voluptatibus amet. Esse minus quae deserunt perferendis, neque vero. Labore!
-          Et nulla reiciendis laboriosam asperiores dolor vitae quo animi sequi consequuntur officia nam reprehenderit minima obcaecati sunt soluta ex corrupti, libero vel nemo dolore! Tempora totam neque quod labore tenetur.
-          Voluptas praesentium cumque doloribus magnam at. Esse, enim, velit modi quos natus dolorum officiis repudiandae animi labore amet omnis laborum. Provident corporis quis ipsa. Iste saepe debitis voluptatibus iusto similique.
-          Repellendus, illo impedit facere magnam aliquam doloremque tempore. Expedita tempora praesentium ipsa, ipsum minima in voluptate dolore omnis rem voluptatum voluptatibus labore? Doloremque dolorum magnam repudiandae quod ut quae expedita.
-          Odio ratione consectetur delectus, reiciendis repellat sint quas esse dolorem obcaecati porro ipsum facilis enim sit aspernatur dignissimos doloribus veritatis soluta corrupti consequuntur natus voluptate unde. Minus iure enim accusamus.
-          Necessitatibus impedit similique soluta optio incidunt! Recusandae consequuntur eos eveniet debitis nobis odio magni incidunt ipsam necessitatibus ducimus, id, dolorem placeat sed accusamus cum temporibus repellat, modi iusto eaque dolore?
-          Tempora doloremque veritatis blanditiis, voluptate dolorem odit assumenda aliquam possimus! Id assumenda officia voluptas dignissimos placeat, quo dolor quae nulla vel provident facilis ipsam maiores repellendus voluptatum nostrum sed voluptatibus.
-          Expedita quam aliquam reiciendis numquam amet? Autem accusantium reiciendis sed ratione id consectetur recusandae magni sunt quaerat aliquid! Expedita, sint blanditiis. Quis ipsa vero at fugit laboriosam sit nostrum minus!
-          Iure earum quos accusamus harum, tempore voluptas nihil maxime unde quae molestiae error quisquam, deserunt id doloremque magni provident sint est. Id, obcaecati? Sint, molestias? Quam quo tempora consectetur a!
-          Similique nam obcaecati omnis accusantium facilis nemo magnam dicta enim sint! Quibusdam, eos ea odit, minima ipsum autem facilis quidem, provident harum sequi esse. Ad temporibus eligendi eum saepe cupiditate!</p>
-
-        </div>
+        <ng-template #articleContainer></ng-template>
       </section>
 
       <footer>
-        <p>A version of this article appeared in print on August 8, 2010, on page BU1 of the New York edition.</p>
+        <!-- <p>A version of this article appeared in print on August 8, 2010, on page BU1 of the New York edition.</p>
         <p>Copyright 2010 <span class="org fn">The New York Times Company</span></p>
-        <time datetime="2018-08-23 11:00:00">August 23, 2018 at 11 am</time>
+        <time datetime="2018-08-23 11:00:00">August 23, 2018 at 11 am</time> -->
       </footer>
 
     </article>
