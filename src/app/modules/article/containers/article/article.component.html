@@ -4,10 +4,10 @@
   <section class="article-section">
     <article class="article-container">
       
-      <header class="article-header" [innerHTML]="article[0] | safe: 'html'"></header>
+      <header class="article-header" [innerHTML]="content[0] | safe: 'html'"></header>
 
       <section class="article-content">
-        <figure><img src="{{ image }}" alt="{{ getPureText(article[0]) }}"></figure>
+        <figure><img src="{{ image }}" alt="{{ getPureText(content[0]) }}"></figure>
       </section>
 
       <section class="article-content">
