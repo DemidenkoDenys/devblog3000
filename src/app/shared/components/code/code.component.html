@@ -1,6 +1,7 @@
 <div class="code-container">
 
     <ngx-prism
+      class="code-content"
       [language]="language"
       [code]="content"
     ></ngx-prism>
@@ -8,6 +9,8 @@
     <button
       ngxClipboard
       [cbContent]="content"
-      class="code-copy-button"
+      class="code-note code-copy-button"
     >copy</button>
+
+    <span class="code-note code-language">{{ language }}</span>
 </div>
