@@ -18,6 +18,7 @@
       "dom"
     ],
     "paths": {
+      "@core/*": ["src/app/core/*"],
       "@modules": ["src/app/modules"],
       "@modules/*": ["src/app/modules/*"],
       "@mocks": ["src/app/core/mocks"],
@@ -25,6 +26,8 @@
       "@services": ["src/app/core/services"],
       "@pipes": ["src/app/shared/pipes"],
       "@constants": ["src/app/core/constants"]
-    }
+    },
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   }
 }
