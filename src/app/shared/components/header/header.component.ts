@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.documentEventsService.windowScroll$.subscribe(this.toggleHeader.bind(this));
+    this.fontService.setGoogleFont('Montserrat');
   }
 
   private toggleHeader(y: number): void {

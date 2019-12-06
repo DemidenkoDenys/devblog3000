@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewContainerRef, ViewChild, ComponentFactoryResolver } from '@angular/core';
 import { CodeComponent } from '../../../../shared/components/code/code.component';
 import { ParagraphComponent } from '../../components/paragraph/paragraph.component';
-import { ngForArticle } from '@mocks';
+import { ngForArticle, simpleFactory } from '@mocks';
 
 @Component({
   selector: 'app-article',
@@ -16,8 +16,8 @@ export class ArticleComponent implements OnInit {
   @ViewChild('articleContainer', { read: ViewContainerRef }) container: ViewContainerRef;
 
   constructor(private resolver: ComponentFactoryResolver) {
-    this.image = ngForArticle.image;
-    this.content = ngForArticle.content;
+    this.image = simpleFactory.image;
+    this.content = simpleFactory.content;
   }
 
   ngOnInit() { }
